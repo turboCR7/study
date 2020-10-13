@@ -5,7 +5,7 @@
 但是功能俱全的博客系统~!
 
 ## 项目代码
-
+- [B站](https://www.bilibili.com/video/BV1tK4y1h71S/)
 - [码云](https://gitee.com/wzhouzhou/privateBlog/tree/master)
 - [GitHub](https://github.com/wzz1206414629/privateBlog)
 
