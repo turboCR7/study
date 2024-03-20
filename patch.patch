@@ -1,0 +1,15 @@
+Index: src/main/java/com/lmj/controller/MessageController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/lmj/controller/MessageController.java b/src/main/java/com/lmj/controller/MessageController.java
+--- a/src/main/java/com/lmj/controller/MessageController.java	(revision fc41abd8837b7d44f3d11effadf6c9172d21592f)
++++ b/src/main/java/com/lmj/controller/MessageController.java	(date 1710921761117)
+@@ -1,4 +1,6 @@
+ package com.lmj.controller;
+ 
+ public class MessageController {
++
++    //patch
+ }
