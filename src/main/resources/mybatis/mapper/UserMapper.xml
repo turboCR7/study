@@ -54,7 +54,7 @@
 
 <!--    修改用户信息(用户名修改)-->
     <update id="updateUserInfo" parameterType="string">
-        update user set username = #{username},trueName=#{trueName},gender=#{gender},
+        update user set username = #{username},roleId=#{roleId},trueName=#{trueName},gender=#{gender},
         qq=#{qq},wechat=#{wechat},personalBrief=#{signature} where username=#{oldUsername}
     </update>
 

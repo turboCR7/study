@@ -11,7 +11,7 @@
 
 <!--    查询一篇文章的所有的顶级评论 及pid为0的顶楼评论-->
     <select id="queryAllCommentPid" resultType="Comment">
-        select * from comment,article AS a,user as u where a.id=#{id} and articleId=#{id} and pid=0 and answererName=u.username group by commentDate desc
+        select * from comment,article AS a,user as u where a.id=#{id} and articleId=#{id} and pid=0 and answererName=u.username
     </select>
 
 <!--    根据id查询评论-->

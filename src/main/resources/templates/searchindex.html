@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>blog</title>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/amazeui.js}"></script>
+    <link rel="stylesheet" th:href="@{/css/amazeui.css}">
+    <link rel="stylesheet" th:href="@{/css/header.css}">
+    <link rel="stylesheet" th:href="@{/css/index.css}" charset="utf-8">
+</head>
+<body>
+<!--文章模块-->
+<div class="am-u-sm-6" id="article">
+    <!--文章1-->
+    <section class="am-panel am-panel-default" th:each="article : ${articles}">
+        <main class="am-panel-bd">
+            <header class="article-header">
+                <h1>
+                    <a class="article-title" th:href="@{/articlePage/}+@{${article.getId()}}" th:text="${article.getArticleTitle()}" target="_blank"></a>
+                </h1>
+
+<!--                <div class="article-meta row" style="display: inline">-->
+<!--                    <span class="articleType am-badge am-badge-success">原创</span>-->
+<!--                    <i class="am-icon-calendar"><span th:text="${article.getPublishDate()}"></span></i>-->
+<!--                    <i class="am-icon-user" th:text="${article.getAuthor()}"></i>-->
+<!--                    <i class="am-icon-folder"><a th:href="@{/articleType/}+@{${article.getArticleType()}}+@{/1}" th:text="${article.getArticleType()}"></a></i>-->
+<!--                </div>-->
+            </header>
+            <!--正文-->
+
+
+            <a th:href="@{/articlePage/}+@{${article.getId()}}" target="_blank" class="article-btn">阅读全文 <i class="am-icon-angle-double-right"></i></a>
+        </main>
+        <footer class="am-panel-footer">
+            <a class="article-tags" th:href="@{/tagCloud/}+@{${tag}}+@{/1}" th:each="tag : ${article.getArticleTags().split(',')}">
+                <span class="am-icon-tag" style="color:#555555;"></span>[[${tag}]]
+            </a>
+        </footer>
+    </section>
+</div>
+
+</body>
+<script type="text/javascript" th:src="@{/js/index.js}"></script>
+<script>
+    //上边框头像跟个人信息栏头像同步地址
+    $("#topbar_img").attr('src',$("#left_img")[0].src);
+
+</script>
+</html>

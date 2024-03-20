@@ -24,50 +24,41 @@
                         <!--头像图片-->
                         <div class="am-u-sm-2">
                             <!--默认头像地址imgs/topbar.jpg-->
-                            <img id="left_img" th:src="@{${adminUser.avatarImgUrl}}" alt="个人头像">
+<!--                            <img id="left_img" th:src="@{${user.avatarImgUrl}}" alt="个人头像">-->
                         </div>
                         <!--个人信息面板-->
-                        <div class="am-u-sm-8">
-                            <h2 id="username" th:text="${adminUser.trueName}"></h2>
-                            <small style="font-size: 13px;color: #808080ad" th:text="${adminUser.personalBrief}"></small>
-                            <p style="color: #009688;">微信: [[${adminUser.wechat}]]</p>
-                            <p style="color: #009688">QQ: [[${adminUser.qq}]]</p>
+<!--                        <div class="am-u-sm-8">-->
+<!--                            <h2 id="username" th:text="${adminUser.trueName}"></h2>-->
+<!--                            <small style="font-size: 13px;color: #808080ad" th:text="${adminUser.personalBrief}"></small>-->
+<!--                            <p style="color: #009688;">微信: [[${adminUser.wechat}]]</p>-->
+<!--                            <p style="color: #009688">QQ: [[${adminUser.qq}]]</p>-->
 
-                            <!-- 链接触发器， href 属性为目标元素 ID amazeui的弹出层侧边栏-->
-                            <button class="am-btn am-btn-secondary" data-am-offcanvas="{target: '#my-left-bar', effect: 'push'}" style="border-radius: 80px;margin-top: 25px">点击了解一下叭!</button>
+<!--                            &lt;!&ndash; 链接触发器， href 属性为目标元素 ID amazeui的弹出层侧边栏&ndash;&gt;-->
+<!--                            <button class="am-btn am-btn-secondary" data-am-offcanvas="{target: '#my-left-bar', effect: 'push'}" style="border-radius: 80px;margin-top: 25px">点击了解一下叭!</button>-->
 
-                            <!-- 侧边栏内容 -->
-                            <div id="my-left-bar" class="am-offcanvas">
-                                <div class="am-offcanvas-bar">
-                                    <div class="am-offcanvas-content" style="text-align: center">
-                                    <!--侧边栏内容-->
-                                        <p>
-                                            我不愿让你一个人 <br/>
-                                            承受这世界的残忍 <br/>
-                                            我不愿眼泪陪你到 永恒
-                                        </p>
-                                        <p style="color: pink">交交朋友也挺不错的啊~!</p>
-                                        <hr>
-                                        <p style="color: orange">来加个QQ吧~</p>
-                                        <img id="wechat_img" th:src="@{imgs/qq.jpg}" style="width: 130px;height: 150px;">
-                                        <p style="color: orange">欢迎加入开发交流群~~</p>
-                                        <img id="qq_img" th:src="@{imgs/qun.png}" style="width: 130px;height: 150px;">
+<!--                            &lt;!&ndash; 侧边栏内容 &ndash;&gt;-->
+<!--                            <div id="my-left-bar" class="am-offcanvas">-->
+<!--                                <div class="am-offcanvas-bar">-->
+<!--                                    <div class="am-offcanvas-content" style="text-align: center">-->
+<!--                                    &lt;!&ndash;侧边栏内容&ndash;&gt;-->
+<!--                                        <p>-->
+
+<!--                                            学习是一种信仰-->
+<!--                                        </p>-->
+
+<!--                                        <hr>-->
 
 
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
                     </div>
                 </main>
 
-                <footer class="am-panel-footer" style="background: white">
-                    <a href="tencent://message/?Menu=yes&uin=1206414629&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45" id="first_icon" target="_blank" class="am-icon-qq am-icon-sm " title="QQ"></a>
-                    <a href="https://space.bilibili.com/218350216" target="_blank" class="am-icon-md am-icon-bitcoin" title="BiliBili"></a>
-                    <a href="https://gitee.com/wzhouzhou" target="_blank" class="am-icon-md am-icon-gg" title="码云"></a>
-                    <a href="https://github.com/wzz1206414629" target="_blank" class="am-icon-md am-icon-github" title="github"></a>
-                </footer>
+
 
             </section>
 
@@ -93,6 +84,18 @@
             </section>
 
         </div>
+
+     <div>
+        <form  class="search-box" th:action="@{admin/articleSearch}" method="post">
+            <label>文章名：</label>
+            <input type="text" name="key" class="form-control" placeholder="关键字">
+            <button type="submit" class="am-btn am-btn-secondary am-topbar-btn am-btn-sm">
+                <span style="color: white">搜索</span>
+            </button>
+        </form>
+    </div>
+
+
 
     <!--文章模块-->
         <div class="am-u-sm-6" id="article">

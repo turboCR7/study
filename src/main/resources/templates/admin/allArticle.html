@@ -58,8 +58,8 @@
                                 <a th:href="@{/articlePage/}+@{${article.getId()}}" target="_blank" th:text="${article.getArticleTitle()}"></a>
                             </td>
                             <td th:text="${article.getAuthor()}"></td>
-                            <td>
-                                <a th:href="@{/articleType/}+@{${article.getArticleType()}}" target="_blank" th:text="${article.getArticleType()}"></a>
+                            <td
+                                th:text="${article.getArticleType()}">
                             </td>
                             <td th:text="${article.getArticleTags()}"></td>
                             <td th:text="${article.getPublishDate()}"></td>
@@ -81,7 +81,7 @@
                 </div>
             </div>
         </div><br>
-        <div class="pull-right"><a href="" target="_blank">Power By Wangzz</a>&nbsp;&nbsp;</div>
+
     </div>
 
 </div>

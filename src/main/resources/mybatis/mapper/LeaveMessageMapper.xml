@@ -11,12 +11,12 @@
 
 <!--    查询最近的留言-->
     <select id="queryAllLeaveMessageByLimit" resultType="LeaveMessage">
-        select * from leavemessage group by time desc limit 0,6;
+        select * from leavemessage;
     </select>
 
 <!--    查询所有留言-->
     <select id="queryAllLeaveMessage" resultType="LeaveMessage">
-        select * from leavemessage
+        select * from leavemessage ORDER BY time DESC
     </select>
 
 <!--    删除留言-->

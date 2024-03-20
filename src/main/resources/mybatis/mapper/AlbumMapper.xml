@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wzz.mapper.AlbumMapper">
+
+    <insert id="addAlbum">
+        insert into album (name,introduction,img,userid)
+        values (#{name},#{introduction},#{img},#{userid});
+    </insert>
+    <update id="updateAlbum">
+        update album
+        set name=#{name},introduction=#{introduction},img=#{img}
+        where id =#{id}
+    </update>
+    <delete id="deleteAlbum">
+        delete from album where id=#{id}
+    </delete>
+
+    <!--    查询所有图片-->
+    <select id="queryAllAlbum" resultType="com.lmj.pojo.Album">
+        SELECT * FROM album
+    </select>
+    <select id="queryAlbumByLimit" resultType="com.lmj.pojo.Album">
+        select * from album  order by id desc limit #{start},#{pageSize}
+    </select>
+
+    <select id="queryAlbumByNameLimit" resultType="com.lmj.pojo.Album">
+        select * from album where album.name like #{name} limit #{start},#{pageSize}
+    </select>
+    <select id="queryAlbumById" resultType="com.lmj.pojo.Album">
+        select *from album where id=#{id}
+    </select>
+
+
+</mapper>

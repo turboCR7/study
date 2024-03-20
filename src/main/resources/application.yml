@@ -1,9 +1,10 @@
+
 spring:
   datasource:
     username: root
-    password: root
+    password: 123456
     url: jdbc:mysql://localhost:3306/blog?characterEncoding=utf8
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     #   数据源其他配置
     initialSize: 5
@@ -12,7 +13,7 @@ spring:
     maxWait: 60000
     timeBetweenEvictionRunsMillis: 60000
     minEvictableIdleTimeMillis: 300000
-    validationQuery: SELECT 1 FROM DUAL
+#    validationQuery: SELECT 1 FROM DUAL
     testWhileIdle: true
     testOnBorrow: false
     testOnReturn: false
@@ -27,3 +28,5 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+server:
+  port: 8082

@@ -8,7 +8,6 @@
     <select id="queryAllFriend" resultType="FriendLink">
         select * from friendlink;
     </select>
-
 <!--    添加友链-->
     <insert id="addFriendLink">
         insert into friendlink (blogName,url) values (#{name},#{url})

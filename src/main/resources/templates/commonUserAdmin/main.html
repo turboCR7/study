@@ -71,13 +71,13 @@
 <div class="container-fluid">
     <div class="row">
         <div style="position: fixed; bottom: 5px; right: 10px;">
-            <div class="pull-right"><a href="" target="_blank">Power By Wangzz</a>&nbsp;&nbsp;</div>&nbsp;&nbsp;
+
         </div>
     </div>
 </div>
 </body>
 <script type="text/javascript" th:inline="javascript">
     //后台右上角的头像图标
-    $("#userIcon").attr('src','http://localhost:8080/'+[[${user.avatarImgUrl}]])
+    $("#userIcon").attr('src','http://localhost:8082/'+[[${user.avatarImgUrl}]])
 </script>
 </html>

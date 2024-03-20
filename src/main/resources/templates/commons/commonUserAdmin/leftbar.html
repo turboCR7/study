@@ -11,6 +11,24 @@
 
         <a th:href="@{/userAdmin/toCommentList/}+@{${session.username}}" class="list-group-item">
             <span class="glyphicon glyphicon-comment"></span>&nbsp;我的评论</a>
+
+        <a th:href="@{/common/allArticle/}+@{1}">
+            <button type="button" class="btn btn-default btn-block">
+                个人文章                            </button>
+        </a>
+
+        <a th:href="@{/common/commonToEditorPage}">
+            <button type="button" class="btn btn-default btn-block">
+                写文章                            </button>
+        </a>
+
+        <a th:href="@{/common/allAlbum/}+@{1}">
+            <button type="button" class="btn btn-default btn-block">
+                相册                            </button>
+        </a>
+
+
+
     </div>
 </div>
 
