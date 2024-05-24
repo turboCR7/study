@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wzz.mapper.FriendLinkMapper">
+<mapper namespace="com.lmj.mapper.FriendLinkMapper">
 
 <!--    查询所有的友链好友信息-->
     <select id="queryAllFriend" resultType="FriendLink">
